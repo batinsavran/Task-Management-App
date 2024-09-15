@@ -2,23 +2,48 @@
 //  ContentView.swift
 //  Task Management App
 //
-//  Created by mobiroller on 16.09.2024.
+//  Created by bsDev on 16.09.2024.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isToggled = false
+    @State private var imageName = "scribble.variable"
+    @State private var imageText = "This is a scribble."
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Button("Tıkla") {
+                imageName = "network"
+                imageText = "Network'e bağlandı"
+            }
+            .padding()
+            .frame(width: 120, height: 50)
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(15)
+            
+            Toggle(isOn: $isToggled) {
+                Text("Kaydır")
+            }
+            .padding()
+            
+            Image(systemName: imageName)
                 .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+                .foregroundColor(.red)
+            
+            Text(imageText)
+                .padding()
         }
         .padding()
+        .background(isToggled ? Color.black : Color.white)
+        .foregroundColor(isToggled ? Color.white : Color.black)
+        .animation(.easeInOut, value: isToggled)
     }
 }
 
 #Preview {
     ContentView()
 }
+
