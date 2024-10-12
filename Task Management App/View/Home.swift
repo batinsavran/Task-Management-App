@@ -20,7 +20,6 @@ struct Home: View {
         })
     }
     
-    //Header View
     @ViewBuilder
     func HeaderView() -> some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -39,7 +38,6 @@ struct Home: View {
                 .textScale(.secondary)
                 .foregroundStyle(.gray)
             
-            // Week Slider
             TabView(selection: $currentWeekIndex){
                 ForEach(weekSlider.indices, id: \.self) { index in
                     let week = weekSlider[index]
@@ -64,7 +62,6 @@ struct Home: View {
         .background(.white)
     }
     
-    // Week View
     @ViewBuilder
     func WeekView(_ week: [Date.WeekDay]) -> some View {
         HStack(spacing: 0) {
