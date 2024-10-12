@@ -3,12 +3,14 @@ import SwiftUI
 struct ContentView: View {
 
     var body: some View {
-        VStack {
-            
-        }
+        Home()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.BG)
+            .preferredColorScheme(.light)
     }
 }
 
 #Preview {
     ContentView()
 }
+
