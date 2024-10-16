@@ -18,6 +18,7 @@
 		7C25BE132CBAA37E00543594 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25BE122CBAA37E00543594 /* View+Extensions.swift */; };
 		7C25BE152CBAA3AE00543594 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25BE142CBAA3AE00543594 /* Date+Extensions.swift */; };
 		7C25BE182CBAA58A00543594 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25BE172CBAA58A00543594 /* Home.swift */; };
+		7C2C39762CC037DF0030A249 /* OffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2C39752CC037DF0030A249 /* OffsetKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		7C25BE122CBAA37E00543594 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		7C25BE142CBAA3AE00543594 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		7C25BE172CBAA58A00543594 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		7C2C39752CC037DF0030A249 /* OffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				7C25BE122CBAA37E00543594 /* View+Extensions.swift */,
 				7C25BE142CBAA3AE00543594 /* Date+Extensions.swift */,
+				7C2C39752CC037DF0030A249 /* OffsetKey.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				7C1353B52C97846500EC7D21 /* ContentView.swift in Sources */,
 				7C25BE102CBA9F2100543594 /* Task.swift in Sources */,
 				7C25BE132CBAA37E00543594 /* View+Extensions.swift in Sources */,
+				7C2C39762CC037DF0030A249 /* OffsetKey.swift in Sources */,
 				7C25BE152CBAA3AE00543594 /* Date+Extensions.swift in Sources */,
 				7C25BE182CBAA58A00543594 /* Home.swift in Sources */,
 				7C1353B32C97846500EC7D21 /* Task_Management_AppApp.swift in Sources */,
