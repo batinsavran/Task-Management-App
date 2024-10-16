@@ -12,6 +12,14 @@ extension Date {
         return Calendar.current.isDateInToday(self)
     }
     
+    var isSameHour: Bool {
+        return Calendar.current.compare(self, to: .init(), toGranularity: .hour) == .orderedSame
+    }
+    
+    var isPast: Bool {
+        return Calendar.current.compare(self, to: .init(), toGranularity: .hour) == .orderedAscending
+    }
+    
     func fetchWeek(_ date: Date = .init()) -> [WeekDay] {
         let calendar = Calendar.current
         let startOfDate = calendar.startOfDay(for: date)
@@ -27,13 +35,33 @@ extension Date {
                 week.append(.init(date: weekDay))
             }
         }
-    
+        
         return week
     }
+    
+    func createNextWeek() -> [WeekDay] {
+        let calendar = Calendar.current
+        let startOfLastDate = calendar.startOfDay(for: self)
+        guard let nextDate = calendar.date(byAdding: .day, value: 7, to: startOfLastDate) else {
+            return []
+        }
+        return fetchWeek(nextDate)
+    }
+
+    func createPreviousWeek() -> [WeekDay] {
+        let calendar = Calendar.current
+        let startOfFirstDate = calendar.startOfDay(for: self)
+        guard let previousDate = calendar.date(byAdding: .day, value: -7, to: startOfFirstDate) else {
+            return []
+        }
+        return fetchWeek(previousDate)
+    }
+
     
     struct WeekDay: Identifiable {
         var id: UUID = .init()
         var date: Date
     }
 }
+
 

@@ -4,13 +4,13 @@ extension View {
     @ViewBuilder
     func hSpacing(_ alignment: Alignment) -> some View {
         self
-            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: alignment)
+            .frame(maxWidth: .infinity, alignment: alignment)
     }
     
     @ViewBuilder
     func vSpacing(_ alignment: Alignment) -> some View {
         self
-            .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: alignment)
+            .frame(maxHeight: .infinity, alignment: alignment)
     }
     
     func isSameDate(_ date1: Date, _ date2: Date) -> Bool {
