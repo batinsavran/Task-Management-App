@@ -26,7 +26,11 @@ The **Task Management App** is a robust and user-friendly iOS application develo
 
 ## Screenshots
 
-*Screenshots for interface and features coming soon...*
+<p >
+  <img src="https://github.com/batinsavran/Task-Management-App/raw/main/screenshots/tmp_1.png" width="250" />
+  <img src="https://github.com/batinsavran/Task-Management-App/raw/main/screenshots/tmp_2.png" width="250" />
+  <img src="https://github.com/batinsavran/Task-Management-App/raw/main/screenshots/tmp_3.png" width="250" />
+</p>
 
 ## Usage
 
