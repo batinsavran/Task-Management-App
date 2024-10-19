@@ -6,5 +6,6 @@ struct Task_Management_AppApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Task.self)
     }
 }
