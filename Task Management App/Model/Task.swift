@@ -1,25 +1,34 @@
 import SwiftUI
+import SwiftData
 
-// A structure that defines a Task model with an ID, title, creation date, completion status, and a color tint.
-struct Task: Identifiable {
-    var id: UUID = .init()
+@Model
+class  Task: Identifiable {
+    var id: UUID
     var taskTitle: String
-    var creationDate: Date = .init()
-    var isCompleted: Bool = false
-    var tint: Color
+    var creationDate: Date
+    var isCompleted: Bool
+    var tint: String
+
+    init(id: UUID = .init(), taskTitle: String, creationDate: Date = .init(), isCompleted: Bool = false, tint: String) {
+        self.id = id
+        self.taskTitle = taskTitle
+        self.creationDate = creationDate
+        self.isCompleted = isCompleted
+        self.tint = tint
+    }
+
+    var tintColor: Color {
+        switch tint {
+        case "TaskColor 1": return .taskColor1
+        case "TaskColor 2": return .taskColor2
+        case "TaskColor 3": return .taskColor3
+        case "TaskColor 4": return .taskColor4
+        case "TaskColor 5": return .taskColor5
+        default: return .black
+        }
+    }
 }
 
-// An array of sample tasks, each initialized with a title, creation date, completion status, and color tint.
-var sampleTasks: [Task] = [
-    .init(taskTitle: "Record Video", creationDate: .init(), isCompleted: true, tint: .taskColor1),
-    .init(taskTitle: "Redesign Website", creationDate: .init(), tint: .taskColor2),
-    .init(taskTitle: "Go for a Walk", creationDate: .init(), tint: .taskColor3),
-    .init(taskTitle: "Edit Video", creationDate: .init(), isCompleted: true, tint: .taskColor4),
-    .init(taskTitle: "Publish Video", creationDate: .init(), isCompleted: true, tint: .taskColor1),
-    .init(taskTitle: "Tweet about new Video!", creationDate: .init(), tint: .taskColor5)
-]
-
-// Extension for the Date structure that allows you to add or subtract hours from the current date.
 extension Date {
     static func updateHour(_ value: Int) -> Date {
         let calendar = Calendar.current
