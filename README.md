@@ -45,7 +45,7 @@ The **Task Management App** is a robust and user-friendly iOS application develo
 - **Language**: Swift
 - **IDE**: Xcode
 - **Frameworks**:
-  - UIKit for building the user interface
+  - SwiftUI for building the user interface
   - Core Data for data persistence
   - UserNotifications for handling reminders
 
